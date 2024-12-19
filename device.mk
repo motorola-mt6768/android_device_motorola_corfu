@@ -86,6 +86,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss-V1-ndk.vendor
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.moto
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
