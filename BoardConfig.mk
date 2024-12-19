@@ -72,3 +72,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # VNDK
 BOARD_VNDK_VERSION := current
+
+# VINTF
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/manifest.xml
+DEVICE_MATRIX_FILE += $(DEVICE_PATH)/vintf/compatibility_matrix.xml
