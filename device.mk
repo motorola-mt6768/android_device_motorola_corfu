@@ -51,6 +51,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+
+# Inherit the proprietary files
+$(call inherit-product, vendor/motorola/corfu/corfu-vendor.mk)
+
 # A/B
 PRODUCT_PACKAGES += \
     com.android.hardware.boot \
