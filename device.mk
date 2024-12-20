@@ -400,3 +400,6 @@ PRODUCT_PACKAGES += \
     fstab.mt6768_ramdisk \
     ueventd.rc
 
+PRODUCT_PACKAGES += \
+    init.recovery.mt6768.rc
+
