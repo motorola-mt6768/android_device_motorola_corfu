@@ -13,6 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+
 cc_library_static {
     name: "libinit_corfu",
     recovery_available: true,
@@ -22,5 +23,8 @@ cc_library_static {
     include_dirs: [
         "system/libbase/include",
         "system/core/init"
+    ],
+    shared_libs: [
+        "libbase"
     ]
 }
