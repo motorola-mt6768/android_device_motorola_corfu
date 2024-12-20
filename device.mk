@@ -328,6 +328,12 @@ PRODUCT_PACKAGES += \
     libsfplugin_ccodec_utils.vendor \
     libcodec2_soft_common.vendor
 
+# VNDK
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v32.so
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0.vendor \
