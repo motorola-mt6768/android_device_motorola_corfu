@@ -120,6 +120,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_corfu
 # SPL
 VENDOR_SECURITY_PATCH := 2023-12-01
 
+# SELinux
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
