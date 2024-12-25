@@ -337,10 +337,10 @@ PRODUCT_PACKAGES += \
     libcodec2_soft_common.vendor
 
 # VNDK
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v32.so
+PRODUCT_PACKAGES += \
+    libutils-v32 \
+    libhidlbase-v32 \
+    libui-v32
 
 # Display
 PRODUCT_PACKAGES += \
