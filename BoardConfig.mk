@@ -68,6 +68,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 
 #prebuilt
 include prebuilt/motorola/corfu/kernel_prebuilt.mk
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/vendor-modules/*.ko)
 
 # Display
 TARGET_SCREEN_DENSITY := 420
