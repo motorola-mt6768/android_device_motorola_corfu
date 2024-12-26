@@ -34,17 +34,14 @@ cc_binary {
         "android.hardware.usb.gadget@1.0",
         "android.hardware.usb-V1-ndk",
         "libcutils",
-        "android.frameworks.stats-V2-ndk",
         "pixelatoms-cpp",
         "libbinder_ndk",
-
     ],
     static_libs: [
         "libpixelusb",
         "libpixelstats",
     ],
     export_shared_lib_headers: [
-        "android.frameworks.stats-V2-ndk",
         "pixelatoms-cpp",
     ],
 }
