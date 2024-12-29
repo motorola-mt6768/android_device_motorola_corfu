@@ -203,6 +203,18 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     libshim_sink
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
+
+PRODUCT_PACKAGES += \
+    libmockdrmcryptoplugin
+
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.3.vendor \
+    android.hardware.drm@1.4.vendor
+
 # Keymaster
 PRODUCT_PACKAGES += \
     libkeymaster41.vendor \
