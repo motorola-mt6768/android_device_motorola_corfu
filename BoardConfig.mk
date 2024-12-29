@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/corfu
+DEVICE_PATH := device/motorola/cofud
 
 #build hacks
 BUILD_BROKEN_DUP_RULES := true
