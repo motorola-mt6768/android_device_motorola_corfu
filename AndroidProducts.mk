@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_corfu.mk
+    $(LOCAL_DIR)/lineage_cofud.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_corfu-user \
-    lineage_corfu-userdebug \
-    lineage_corfu-eng
+    lineage_cofud-user \
+    lineage_cofud-userdebug \
+    lineage_cofud-eng
