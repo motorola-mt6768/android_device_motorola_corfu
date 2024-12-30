@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/corfu
+DEVICE_PATH := device/motorola/cofud
 
 #build hacks
 BUILD_BROKEN_DUP_RULES := true
@@ -16,7 +16,7 @@ ALLOW_MISSING_DEPENDENCIES := true
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # OTA assert
-TARGET_OTA_ASSERT_DEVICE := corfu
+TARGET_OTA_ASSERT_DEVICE := cofud
 
 # Architecture
 TARGET_ARCH := arm64
@@ -33,7 +33,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := corfu
+TARGET_BOOTLOADER_BOARD_NAME := cofud
 TARGET_NO_BOOTLOADER := true
 
 # Boot Image
@@ -63,8 +63,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 #TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/motorola/corfu
-TARGET_KERNEL_CONFIG := corfu_defconfig
-BOARD_KERNEL_IMAGE_NAME := Image
+TARGET_KERNEL_CONFIG := cofud_defconfig
+BOARD_KERNEL_IMAGE_NAME := Image.gz
 
 #prebuilt
 include prebuilt/motorola/corfu/kernel_prebuilt.mk
