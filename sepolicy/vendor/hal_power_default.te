@@ -1,0 +1,14 @@
+# CPU
+r_dir_file(hal_power_default, sysfs_devices_system_cpu)
+allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+
+# Sched
+allow hal_power_default vendor_proc_kernel_sched:file rw_file_perms;
+
+# Sensors (DT2W)
+r_dir_file(hal_power_default, vendor_sysfs_input)
+allow hal_power_default vendor_sysfs_input:file rw_file_perms;
+
+# Userdata F2FS
+r_dir_file(hal_power_default, sysfs_fs_f2fs)
+allow hal_power_default sysfs_fs_f2fs:file rw_file_perms;

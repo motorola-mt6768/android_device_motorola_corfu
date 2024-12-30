@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/cofud
+DEVICE_PATH := device/motorola/corfu
 
 #build hacks
 BUILD_BROKEN_DUP_RULES := true
@@ -33,7 +33,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := cofud
+TARGET_BOOTLOADER_BOARD_NAME := corfu
 TARGET_NO_BOOTLOADER := true
 
 # Boot Image
@@ -63,8 +63,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 #TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/motorola/corfu
-TARGET_KERNEL_CONFIG := cofud_defconfig
-BOARD_KERNEL_IMAGE_NAME := Image.gz
+TARGET_KERNEL_CONFIG := corfu_defconfig
+BOARD_KERNEL_IMAGE_NAME := Image
 
 #prebuilt
 include prebuilt/motorola/corfu/kernel_prebuilt.mk
@@ -120,6 +120,11 @@ VENDOR_SECURITY_PATCH := 2023-12-01
 
 # SELinux
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
+BOARD_USE_ENFORCING_SELINUX ?= true
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor_mtk
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

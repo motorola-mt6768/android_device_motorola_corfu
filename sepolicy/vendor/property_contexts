@@ -1,0 +1,17 @@
+# FPS
+vendor.hw.fingerprint.status u:object_r:vendor_mot_prop:s0
+
+# Motorola
+ro.vendor.hw. u:object_r:vendor_mot_prop:s0
+vendor.camera.coming.cts u:object_r:vendor_camera_prop:s0
+vendor.hw.touch.status u:object_r:vendor_mot_prop:s0
+ro.vendor.touch. u:object_r:vendor_mot_prop:s0
+
+# NFC
+persist.vendor.nfc. u:object_r:vendor_nfc_prop:s0
+vendor.nfc.fw_status u:object_r:vendor_nfc_prop:s0
+
+# SKU
+ro.boot.product.vendor.sku u:object_r:vendor_sku_prop:s0
+ro.boot.product.hardware.sku u:object_r:vendor_sku_prop:s0
+vendor.boot.product.hardware.sku u:object_r:vendor_sku_prop:s0
