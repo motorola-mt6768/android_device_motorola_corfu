@@ -376,6 +376,11 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget-service.moto \
     android.hardware.usb-service.moto
 
+# Vibrator
+TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service-lazy
