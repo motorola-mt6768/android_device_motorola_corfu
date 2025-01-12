@@ -376,12 +376,14 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget-service.moto \
     android.hardware.usb-service.moto
 
-# Wi-Fi
+# Wifi
 PRODUCT_PACKAGES += \
-    wpa_supplicant \
+    android.hardware.wifi-service-lazy
+
+PRODUCT_PACKAGES += \
     hostapd \
-    libwifi-hal-wrapper \
-    android.hardware.wifi-service
+    wpa_supplicant \
+    android.hardware.wifi.supplicant@1.4.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
