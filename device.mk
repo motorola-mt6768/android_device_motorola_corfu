@@ -385,6 +385,9 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     android.hardware.wifi.supplicant@1.4.vendor
 
+PRODUCT_PACKAGES += \
+    libwifi-hal-wrapper
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
