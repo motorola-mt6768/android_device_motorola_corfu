@@ -190,13 +190,6 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
-# IMS
-PRODUCT_BOOT_JARS += \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-oem-plugin \
-    mediatek-services 
-
 PRODUCT_PACKAGES += \
     libshim_sink
 
