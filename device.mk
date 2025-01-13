@@ -92,26 +92,37 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # Audio
-PRODUCT_PACKAGES += \
-    android.hardware.audio.service \
-    android.hardware.audio@7.0-impl \
-    android.hardware.audio.effect@7.0-impl \
-    android.hardware.bluetooth.audio-impl \
-    android.hardware.soundtrigger@2.3-impl
+$(call soong_config_set,android_hardware_audio,run_64bit,true)
+TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio.service \
+    android.hardware.soundtrigger@2.3-impl
+
+PRODUCT_PACKAGES +=\
+    android.hardware.audio.common-util
+
+PRODUCT_PACKAGES += \
+    audio.primary.default \
     audio.r_submix.default \
+    audio.bluetooth.default \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
-    libtinycompress \
-    libaudiofoundation.vendor \
-    tinymix
+    audio_policy.stub \
+    libalsautils \
+    libaudiopreprocessing \
+    libopus.vendor \
+    audioclient-types-aidl-cpp.vendor
 
 PRODUCT_PACKAGES += \
+    BesLoudness \
+    DolbyManager \
     MtkInCallService
 
+PRODUCT_PACKAGES += \
+    VolumeSynchronizer
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
@@ -156,6 +167,7 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
@@ -193,10 +205,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_sink
 
-# DRM
+# Keymaster / Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
+    libkeymint.vendor \
+    libpuresoftkeymasterdevice.vendor
+
+# Keystore
+PRODUCT_PACKAGES += \
+    android.hardware.hardware_keystore.xml \
+    android.system.wifi.keystore@1.0.vendor \
+    libkeystore-wifi-hidl \
+    libkeystore-engine-wifi-hidl
 
 PRODUCT_PACKAGES += \
     libmockdrmcryptoplugin
@@ -204,13 +223,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.4.vendor
-
-# Keymaster
-PRODUCT_PACKAGES += \
-    libkeymaster41.vendor \
-    libkeymaster4_1support.vendor \
-    libpuresoftkeymasterdevice.vendor \
-    libsoft_attestation_cert.vendor
 
 # Lights
 PRODUCT_PACKAGES += \
