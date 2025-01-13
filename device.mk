@@ -288,7 +288,17 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkpower@1.0.vendor \
-    vendor.mediatek.hardware.mtkpower@1.1.vendor \
+    vendor.mediatek.hardware.mtkpower@1.1.vendor 
+
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.pixel-libperfmgr
+
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2.vendor \
+    libmtkperf_client_vendor \
+    libmtkperf_client \
+    libpowerhalwrap_vendor \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub \
     vendor.mediatek.hardware.mtkpower@1.2.vendor
 
 # Permissions
