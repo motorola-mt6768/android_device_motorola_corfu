@@ -214,6 +214,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_sink
 
+# idc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc
+
+# keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
+    $(LOCAL_PATH)/configs/keylayout/egis_fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/egis_fp.kl
+
 # Keymaster / Keymint
 PRODUCT_PACKAGES += \
     libkeymint.vendor \
@@ -436,11 +445,6 @@ PRODUCT_PACKAGES += \
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
-
-#keylayout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
-    $(LOCAL_PATH)/configs/keylayout/egis_fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/egis_fp.kl
 
 # Ramdisk
 PRODUCT_PACKAGES += \
