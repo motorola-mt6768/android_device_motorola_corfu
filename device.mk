@@ -470,7 +470,8 @@ PRODUCT_PACKAGES += \
     ueventd.rc
 
 PRODUCT_PACKAGES += \
-    init.recovery.mt6768.rc
+    init.recovery.mt6768.rc \
+    libinit_corfu
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
