@@ -278,6 +278,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
     $(LOCAL_PATH)/configs/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy
 
+# MotoActions
+PRODUCT_PACKAGES += \
+    MotoActions
+
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
